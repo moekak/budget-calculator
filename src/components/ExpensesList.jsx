@@ -1,20 +1,29 @@
 import React from 'react'
+import {RiDeleteBinLine} from 'react-icons/ri'
 
 const ExpensesList = ({expenses, setExpenses}) => {
-    const DeleteExpenses = (id) =>{
-        setExpenses(expenses.map((expense) => expense.id != id))
+    
+    const DeleteIncome = (id) => {
+        setExpenses(expenses.filter((expenses)=> expenses.id != id ));
+      
     }
+
+    
   return (
-    <div className="expenses-list">
-        {expenses.map((expense) => {
+    <div className="income-list">
+        
+        {expenses.map(expenses => {
             return (
-                <div className="expense">
-                    <span>{expense.desc}</span>
-                    <span>{expense.price}</span>
-                    <button onClick={()=> {DeleteExpenses(expenses.id)}}>delete</button>
-                </div>
-            )
+                <div className="expenses">
+                    <span>{expenses.desc}</span>
+                    <span>{expenses.price}</span>
+                    <span>{expenses.text}</span>
+                    <button className='btn-delete' onClick={() => {DeleteIncome(expenses.id)}}><RiDeleteBinLine/></button>
+                </div> 
+                 
+            )   
         })}
+      
     </div>
   )
 }

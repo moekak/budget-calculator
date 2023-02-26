@@ -1,6 +1,6 @@
 .main{
   background-color: #1e88e5;
-  height: 100vh;
+
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,9 +14,7 @@
   border: none;
   outline: none;
   padding: 1rem;
-  border-bottom: 1px solid #6ab7ff
-
-  ;
+  border-bottom: 1px solid #6ab7ff;
   
 }
 
@@ -69,4 +67,43 @@ input::placeholder{
 .total{
   font-size: 3rem;
 
+}
+
+/* EEXPENSE LISTS */
+.expenses{
+  background-color: #6ab7ff;
+  width: 60%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
+
+}
+.btn-delete{
+  background-color: transparent;
+  border: none;
+}
+.main__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+}
+
+.list_details{
+  background-color: #6ab7ff;
+  width: 60%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
+
+}
+
+.food-category{
+  background-color: #005cb2;
+  padding: 2rem 5rem;
+}
+.rent-category{
+  background-color: pink;
+  padding: 2rem 5rem;
 }

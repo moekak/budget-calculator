@@ -1,20 +1,22 @@
 import React from 'react'
+import {RiDeleteBinLine} from 'react-icons/ri'
 
 const IncomeList = ({income, setIncome}) => {
 
     const DeleteIncome = (id) => {
-        setIncome(income.filter((income)=> income.id != id));
+        setIncome((income)=> 
+            income.filter((income) => income.id != id)
+        );
     }
     
   return (
     <div className="income-list">
         {income.map(income => {
             return (
-                <div className="lists">
+                <div className="list_details">
                     <span>{income.desc}</span>
                     <span>{income.price}</span>
-                    <button onClick={() => {DeleteIncome(income.id)}}>delete</button>
-                    
+                    <button className='btn-delete' onClick={() => {DeleteIncome(income.id)}}><RiDeleteBinLine/></button>
                 </div> 
                  
             )   

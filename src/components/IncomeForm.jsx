@@ -7,9 +7,12 @@ const IncomeForm = ({income, setIncome}) => {
 
     const AddIncome = (e) =>{
         e.preventDefault();
-        if (income.desc === "" && income.price === ""){
+        if (isNaN(price.current.value)){
             return;
         }
+        if (desc.current.value === "" && price.current.value === "" ){
+            return;
+        } else{
             setIncome(
                 [
                     ...income,
@@ -20,8 +23,11 @@ const IncomeForm = ({income, setIncome}) => {
                     }
                 ]
             )
-            desc.current.value= null
-            price.current.value = null;
+            // desc.current.value= null
+            // price.current.value = null;
+            console.log(income);
+        }
+            
         }
     
   return (
