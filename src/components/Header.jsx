@@ -4,7 +4,7 @@ const Header = ({totalIncome, totalExpenses, foodExpensesTotal, transportationEx
     const difference = totalIncome - totalExpenses
   return (
     <div className="header">
-        <h3>balance</h3>
+        <h2>balance</h2>
         <h1 className={difference > 0 ? "positive" : "negative"}>${difference}</h1>
     </div>
   )
