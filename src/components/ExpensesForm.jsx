@@ -54,17 +54,15 @@ const ExpensesForm = ({expenses, setExpenses}) => {
             <div className="name">
                 <input className='input' type="text" id="desc" placeholder='Add your item...' ref={desc} />
                 <input className='input' type="text" id='price' name='price' placeholder='Add your price...' ref={price} />
-                <select value={category} onChange={handleSubmit}>
+                <select className='option' value={category} onChange={handleSubmit}>
                     {categories.map((category) => {
                         return(
-                            <option key={category} name={category}>{category}</option>
+                            <option  key={category} name={category}>{category}</option>
                         )
                     })}
                 </select>
                 <button className='btn' onClick={AddExpenses}>Add your expenses</button>
-            </div>
-            <span>{category}</span>
-            
+            </div>   
         </form>
     </div>
   )

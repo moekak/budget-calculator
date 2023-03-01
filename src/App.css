@@ -1,20 +1,74 @@
-.main{
-  background-color: #1e88e5;
 
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+/* summary */
+.total_charts{
+  margin-top: 4rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 5rem;
+  margin-top: 5%;
+
+
+}
+.summary{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+.food{
+  background-color: #0000FF;
+}
+.transportation{
+  background-color: #ca2c92;
+}
+.rent{
+  background-color: #ff7f11;
+}
+.clothes{
+  background-color: #FF0000;
+}
+h5{
+  font-size: 1.5rem;
+}
+
+
+.main{
+  background-color: black;
+  color: white;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+
+
+}
+.main > h1{
+  margin: 3rem 0;
 }
 
 .input{
-  background-color: transparent;
+  background-color: #1f1c21;
   border: none;
   outline: none;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   border-bottom: 1px solid #6ab7ff;
+  color: white;
   
 }
 
@@ -25,38 +79,63 @@
 .btn{
   width: 200px;
   border: none;
-  background-color: #6ab7ff
-
-  ;
+  background-color: #ca2c92;
+  color: white;
   
 }
+.form{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  justify-content: center;
+
+}
+.income-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.expenses-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+
+
+}
+
 .input-form{
   margin-top: 5%;
 }
 input:focus{
-  background-color: transparent;
   outline: none;
 }
-input::placeholder{
-  color:#6ab7ff ;
+.option{
+  background-color:#1f1c21;
+  outline: none;
+  border: none;
+  color:gray;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
 }
 
 .header{
   display: flex;
-  width: 60%;
-  padding: 0 2rem;
-  margin-top: 5rem;
-  background-color: #6ab7ff
-
-  ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
 }
 .total-income{
-  width: 50%;
+ 
   border-right: 1px solid #005cb2;
   text-align: center;
 }
 .total-expenses{
-  width: 50%;
+  
   text-align: center;
   border-right: 1px solid #005cb2;
 }
@@ -66,28 +145,28 @@ input::placeholder{
 }
 .total{
   font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 
 }
 
 /* EEXPENSE LISTS */
 .expenses{
-  background-color: #6ab7ff;
-  width: 60%;
+
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
-  margin: 5% 0;
+ 
+ 
 
 }
 .btn-delete{
   background-color: transparent;
   border: none;
 }
-.main__container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5%;
-}
+
 
 .list_details{
   background-color: #6ab7ff;
@@ -106,4 +185,154 @@ input::placeholder{
 .rent-category{
   background-color: pink;
   padding: 2rem 5rem;
+}
+
+.positive{
+  color: green;
+}
+.negative{
+  color: red;
+}
+.income_total{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.income{
+  color: green;
+}
+.expenses_total{
+  color: red;
+}
+.expenses_list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 4rem;
+
+  
+  
+}
+.food-list{
+  background-color: #0000ff;
+  padding: 2rem 1rem;
+}
+.rent-list{
+  background-color: #ff7f11;
+  padding: 2rem 1rem;
+}
+.transportation-list{
+  background-color: #ca2c92;
+  padding: 2rem 1rem;
+}
+.clothes-list{
+  background-color: #ff0000;
+  padding: 2rem 1rem;
+}
+.food-expenses{
+  background-color: #0808ce;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.clothes-expenses{
+  background-color: #c70808;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rent-expenses{
+  background-color: #d76d11;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.transportation-expenses{
+  background-color: #a32276;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h3{
+  text-align: center;
+}
+.expenses_title{
+  margin-top: 5rem;
+}
+.summary_list{
+  background-color: rgb(25, 25, 25);
+  padding-bottom: 6rem;
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px){
+  .total{
+    width: 80%;
+    display: block;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 9rem;
+    margin-top: 5%;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    
+  }
+  .btn{
+    padding: 1rem;
+  }
+  .expenses_list{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+
+}
+  @media screen and (max-width: 750px){
+  .total_charts{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 580px){
+  .form{
+    display: flex;
+    flex-direction: column;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+  h5{
+    font-size: 1rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
 }

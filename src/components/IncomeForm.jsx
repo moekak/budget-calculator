@@ -23,8 +23,8 @@ const IncomeForm = ({income, setIncome}) => {
                     }
                 ]
             )
-            // desc.current.value= null
-            // price.current.value = null;
+            desc.current.value= null
+            price.current.value = null;
             console.log(income);
         }
             

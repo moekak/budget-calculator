@@ -1,30 +1,14 @@
 import React from 'react'
 
-const Header = ({totalIncome, totalExpenses, foodExpensesTootal}) => {
-  
+const Header = ({totalIncome, totalExpenses, foodExpensesTotal, transportationExpensesTotal, rentExpensesTotal, clothesExpensesTotal}) => {
+    const difference = totalIncome - totalExpenses
   return (
     <div className="header">
-        <div className="total-income">
-            <p>Total Income</p>
-            <h2 className='total'>${totalIncome}</h2>
-        </div>
-        <div className="total-expenses">
-            <p>Total Expenses</p>
-            <h2 className='total'>${totalExpenses}</h2>
-        </div>
-        <div className="total-expenses">
-            <p>Food Expenses</p>
-            <h2 className='total'>${foodExpensesTootal}</h2>
-        </div>
-        <div className="differences">
-            <p>Differences</p>
-            <h2 className='total'>${totalIncome - totalExpenses}</h2>
-        </div>
-        
-        
-        
+        <h3>balance</h3>
+        <h1 className={difference > 0 ? "positive" : "negative"}>${difference}</h1>
     </div>
   )
 }
+
 
 export default Header

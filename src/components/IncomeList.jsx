@@ -10,7 +10,7 @@ const IncomeList = ({income, setIncome}) => {
     }
     
   return (
-    <div className="income-list">
+    <div className="income">
         {income.map(income => {
             return (
                 <div className="list_details">
